@@ -1,47 +1,33 @@
 import React, { useState } from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
 const Home = () => {
-	const [color1, setColor1] = useState("");
-	const [color2, setColor2] = useState("");
-	const [color3, setColor3] = useState("btn-secondary");
-	function cambiarColor1() {
-		color1 === "" ? setColor1("0 0 50px white") : setColor1("");
-	}
-
-	function cambiarColor2() {
-		color2 === "" ? setColor2("0 0 50px white") : setColor2("");
-	}
-
-	function cambiarColor3() {
-		color3 === "" ? setColor3("0 0 50px white") : setColor3("");
-	}
+	//    variable | funcion/actualizar
+	const [color, setColor] = useState("");
+	/* la variable color almacena todos los estados.
+	funcion setColor actualiza la informacion dentro de la variable.
+	el useState tedrá el valor por defecto de cada color */
 
 	return (
-		<div className="general">
-			<div className="palo"></div>
-			<div className="semaforo">
-				<button
-					className="btn btn-danger"
-					style={{ boxShadow: color1 }}
-					onClick={cambiarColor1}>
-					<i className={"bi bi-x-lg equis "}></i>
-				</button>
-				<button
-					className="btn2 btn-warning"
-					style={{ boxShadow: color2 }}
-					onClick={cambiarColor2}>
-					<i className={"bi bi-x-lg equis2 "}></i>
-				</button>
-				<button
-					className="btn3 btn-success"
-					style={{ boxShadow: color3 }}
-					onClick={cambiarColor3}>
-					<i className={"bi bi-arrow-down flecha"}></i>
-				</button>
+		<div>
+			<div className="linea"></div>
+			<div className="rectangulo">
+				{/* para concatenar usamos el signo + , cuando utilizamos las llaves es para hacer o escribir algo dinámico*/}
+				{/* la funcion onClick se debe poner dentro de la etiqueta que abre el div y antes del className */}
+				<div
+					onClick={() => setColor("red")}
+					className={
+						"circulo red" + (color === "red" ? " brillo" : "")
+					}></div>
+				<div
+					onClick={() => setColor("yellow")}
+					className={
+						"circulo yellow" + (color === "yellow" ? " brillo" : "")
+					}></div>
+				<div
+					onClick={() => setColor("green")}
+					className={
+						"circulo green" + (color === "green" ? " brillo" : "")
+					}></div>
 			</div>
 		</div>
 	);

@@ -1,55 +1,39 @@
-.palo{
-    margin: auto;
+.linea{
+    background-color: black;
     width: 30px;
-    height: 50px;
-    background-color: black;
-}
-.semaforo{
+    height: 100px;
     margin: auto;
-    width: 220px;
-    height: 640px;
-    border-radius: 10px;
-    background-color: black;
 }
 
-.btn{
-    margin: 30px 0px 0px 20px;
-    border-radius: 100%;
-    width: 180px;
-    height: 180px;
-    border: solid;
+.rectangulo{
+    background-color: black;
+    width: 200px;
+    height: 515px;
+    padding: 10px;
+    margin: auto;
+}
+
+.circulo{
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px 0px 10px 16px;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
     
 }
 
-.equis{
-   font-size: 80px;
-   color:grey;
-   filter: brightness(2);
-}
-
-.btn2{
-    margin: 20px 0px 0px 20px;
-    border-radius: 100%;
-    width: 180px;
-    height: 180px;
-    border: solid white;
-} 
-.equis2{
-    font-size: 80px;
-    color:grey;
-    filter: brightness(2);
- }
-
- .btn3{
-    margin: 20px 0px 20px 20px;
-    border-radius: 100%;
-    width: 180px;
-    height: 180px;
-    border: solid;    
-}
-
-.flecha{
-    font-size: 80px;
-    color:grey;
-    filter: brightness(2); 
+.brillo{
+    box-shadow: 0px 0px 9px 4px #3165c5;
 }
